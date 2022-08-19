@@ -32,8 +32,8 @@ public class RobotContainer {
    * edu.wpi.first.wpilibj2.command.button.JoystickButton}.
    */
   private void configureButtonBindings() {
-    oi.getPovButton(0, 0).whileHeld(()->elevatorSubsystem.set(0.5));
-    oi.getPovButton(0, 180).whileHeld(()->elevatorSubsystem.set(-0.5));
+    oi.getPovButton(0, 0).whileHeld(()->elevatorSubsystem.setPosition(elevatorSubsystem.getSetPoint() + 0.01));
+    oi.getPovButton(0, 180).whileHeld(()->elevatorSubsystem.setPosition(elevatorSubsystem.getSetPoint() - 0.01));
   }
 
   /**

@@ -18,8 +18,15 @@ public final class Constants {
     public static final int LElevatorMotor = 13;
     public static final int RElevatorMotor = 14;
 
+	public static final int EncoderChannelA = 0;	//TODO
+	public static final int EncoderChannelB = 0;	//TODO
+
     public static final double DEADZONE_VALUE = 0.01;
 	public static final int NUMBER_OF_CONTROLLERS = 2;
+
+	public static final double Elevator_kp = 0;	//TODO
+	public static final double Elevator_ki = 0;	//TODO
+	public static final double Elevator_kd = 0;	//TODO
 
     public static final double rElevatorSpeed = 1.0;
 
