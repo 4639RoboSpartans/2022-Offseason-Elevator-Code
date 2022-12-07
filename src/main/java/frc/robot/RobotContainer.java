@@ -6,6 +6,7 @@ package frc.robot;
 
 import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.XboxController;
+import frc.robot.subsystems.ArmSubsystem;
 import frc.robot.subsystems.ElevatorSubsystem;
 import edu.wpi.first.wpilibj2.command.Command;
 
@@ -19,6 +20,7 @@ public class RobotContainer {
   // The robot's subsystems and commands are defined here...
   private final OI oi = new OI();
   private final ElevatorSubsystem elevatorSubsystem = new ElevatorSubsystem();
+  private final ArmSubsystem armSubsystem = new ArmSubsystem();
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
     // Configure the button bindings
@@ -32,8 +34,10 @@ public class RobotContainer {
    * edu.wpi.first.wpilibj2.command.button.JoystickButton}.
    */
   private void configureButtonBindings() {
-    oi.getPovButton(0, 0).whileHeld(()->elevatorSubsystem.setPosition(elevatorSubsystem.getSetPoint() + 0.01));
-    oi.getPovButton(0, 180).whileHeld(()->elevatorSubsystem.setPosition(elevatorSubsystem.getSetPoint() - 0.01));
+    oi.getPovButton(0, 0).whileHeld(() -> elevatorSubsystem.setPosition(elevatorSubsystem.getSetPoint() + 0.01));
+    oi.getPovButton(0, 180).whileHeld(() -> elevatorSubsystem.setPosition(elevatorSubsystem.getSetPoint() - 0.01));
+    oi.getPovButton(0, 90).whileHeld(() -> armSubsystem.rotate(0, 0.01));
+    oi.getPovButton(0, 270).whileHeld(() -> armSubsystem.rotate(0, 0.01));
   }
 
   /**

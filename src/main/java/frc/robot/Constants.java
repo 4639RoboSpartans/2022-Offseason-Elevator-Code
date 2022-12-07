@@ -5,6 +5,7 @@
 package frc.robot;
 
 import edu.wpi.first.math.kinematics.DifferentialDriveKinematics;
+import edu.wpi.first.wpilibj.DigitalSource;
 
 /**
  * The Constants class provides a convenient place for teams to hold robot-wide numerical or boolean
@@ -18,6 +19,10 @@ public final class Constants {
     public static final int LElevatorMotor = 13;
     public static final int RElevatorMotor = 14;
 
+    public static final int ARM_MOTOR = 15;
+    public static final int WRIST_MOTOR = 16;
+	public static final int INTAKE_MOTOR = 17;
+
 	public static final int EncoderChannelA = 0;	//TODO
 	public static final int EncoderChannelB = 0;	//TODO
 
@@ -28,7 +33,19 @@ public final class Constants {
 	public static final double Elevator_ki = 0;	//TODO
 	public static final double Elevator_kd = 0;	//TODO
 
+	public static final double Arm_kp = 0;	//TODO
+    public static final double Arm_ki = 0;	//TODO
+    public static final double Arm_kd = 0;	//TODO
+
+	public static final double Wrist_kp = 0;	//TODO
+    public static final double Wrist_ki = 0;	//TODO
+    public static final double Wrist_kd = 0;	//TODO
+
     public static final double rElevatorSpeed = 1.0;
+	public static final DigitalSource ArmEncoderChannelA = null;
+    public static final DigitalSource ArmEncoderChannelB = null;
+    public static final DigitalSource WristEncoderChannelA = null;
+    public static final DigitalSource WristEncoderChannelB = null;
 
     public enum Axes {
 		LEFT_STICK_X(0), LEFT_STICK_Y(4), LEFT_TRIGGER(2), RIGHT_TRIGGER(3), RIGHT_STICK_X(1), RIGHT_STICK_Y(5);
